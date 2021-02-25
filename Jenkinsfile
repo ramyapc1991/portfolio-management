@@ -13,7 +13,7 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-          echo 'docker image building'
+          echo 'docker image building $BUILD_NUMBER'
           docker.build registry + ":$BUILD_NUMBER"
         }
       }
