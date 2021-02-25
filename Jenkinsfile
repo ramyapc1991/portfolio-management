@@ -4,7 +4,9 @@ pipeline {
         stage('build') {
             steps {
                 echo 'building application'
-                 sh 'mvn install'
+                 withMaven(maven : 'apache-maven-3.6.1') {
+                bat'mvn install'
+                }
             }
         }
         stage('Test') {
