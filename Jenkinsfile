@@ -14,7 +14,7 @@ pipeline {
       steps{
         script {
           echo 'docker image building $BUILD_NUMBER'
-          docker.build registry + ":$BUILD_NUMBER"
+          sudo docker run hello-world
         }
       }
     }
