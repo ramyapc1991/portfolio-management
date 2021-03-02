@@ -14,7 +14,7 @@ pipeline {
       steps{
         script {
           echo 'docker image building $BUILD_NUMBER'
-          sudo docker run hello-world
+          sh 'docker ps'
         }
       }
     }
